@@ -1,6 +1,7 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .products {
   .product {
     text-align: center;
@@ -25,7 +26,7 @@
       }
     }
     .price {
-      background-color: greenyellow;
+      background-color: #A9A9A9;
       font-weight: bold;
     }
   }
