@@ -1,3 +1,4 @@
+Category
 ActiveAdmin.register Product do
 
   

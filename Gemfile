@@ -28,6 +28,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'carrierwave'
+gem 'rmagick'
+
+gem 'russian'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -43,6 +47,8 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+gem 'will_paginate', '~> 3.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

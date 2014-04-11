@@ -9,5 +9,28 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require reset
+ *= require text
+ *= require 960_12_col
+ *= require products
+ *= require cart
  */
+
+.header {
+  padding: 10px 0;
+  .title {
+    font-size: 24px;
+    a {
+      color: #000000;
+      text-decoration: none;
+    }
+  }
+}
+
+.menu {
+  background-color: #488DB2;
+  padding: 10px 0;
+  a {
+    color: #FFFFFF;
+  }
+}
