@@ -9,6 +9,7 @@
 <div class="products">
     <% @products.each do |product| %>
       <div class="product grid_3">
+      <%= link_to image_tag(product.image_url(:thumb) || 'product_blank.gif'), product %>
        
 
 

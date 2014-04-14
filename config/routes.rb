@@ -6,9 +6,10 @@ MegashopT::Application.routes.draw do
     resources :comments
   end
   
-  resources :line_items
+  resources :items
 
   root 'products#index'
+  get 'cart' => 'cart#index'
   
 
 
