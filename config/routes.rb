@@ -9,7 +9,7 @@ MegashopT::Application.routes.draw do
   resources :items
 
   root 'products#index'
-  get 'cart' => 'cart#index'
+  get 'cart' => 'carts#index'
   
 
 

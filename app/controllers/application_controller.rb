@@ -12,6 +12,4 @@ class ApplicationController < ActionController::Base
     cart
   end
   helper_method :current_cart
-
-  	
 end

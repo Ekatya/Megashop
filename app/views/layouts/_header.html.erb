@@ -15,9 +15,11 @@
       <% end %>
     </div>
     <div class="grid_4">
+      <%= link_to(cart_path) do %>
       Корзина: <%= current_cart.id %>
       <br/>
-      
+      В корзине: <%= current_cart.items.count %> <%= Russian.p(current_cart.items.count, "товар", "товара", "товаров") %>
+      <% end %>
     </div>
     </div>
   </div>
