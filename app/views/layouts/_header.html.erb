@@ -3,21 +3,25 @@
     <div class="grid_8">
       <h3 class="title"><%= link_to 'Megashop', root_path %></h3>
     </div>
-    <div class="grid_4">
+    <div class="grid_4">  
+ 
       <%= form_tag('/products', method: :get) do %>
-          <%= text_field_tag :search %>
-          <!--Два поля — цена "от" и "до", с заполненными по умолчанию 0 и максимальной стоимостью товара соответственно.-->
-          <%= submit_tag 'Найти!' %>
+        <%= text_field_tag :search,'',placeholder: "Поиск товара" %>
+        <br>Цена от:
+        <%= select_tag :price_min, options_for_select((Product.all.map { |p| p.price }).sort, 0) %>
+      <span>Цена до:</span>
+      <%= select_tag :price_max, options_for_select(Product.all.map { |p| p.price },  @max_price) %>
+        <%= submit_tag 'Найти' %>
       <% end %>
     </div>
     <div class="grid_4">
       
+<%= @max_price.to_i %>
 
 
 
 
 
-      
     </div>
   </div>
 </div>

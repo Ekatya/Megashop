@@ -1,8 +1,9 @@
 <div class="grid_12">
     <h2>Товары</h2>
     <div class="sorting">
-      <b>По имени:</b> (<%= link_to 'возр.', root_path(sort: 'name_asc') %>) (<%= link_to 'убыванию', root_path(sort: 'name_desc') %>)
-      <b>По цене:</b> (<%= link_to 'возр.', root_path(sort: 'price_asc') %>) (<%= link_to 'убыванию', root_path(sort: 'price_desc') %>)
+      <b>Сортировать по цене:</b> 
+      <%= link_to 'по возрастанию', root_path(sort: 'price_asc') %>
+      <%= link_to ' по убыванию', root_path(sort: 'price_desc') %>
     </div>
 </div>
 <div class="products">

@@ -1,11 +1,17 @@
 MegashopT::Application.routes.draw do
-  resources :categories
-
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :products
+
+  resources :products do
+    resources :comments
+  end
+  
+  resources :line_items
 
   root 'products#index'
+  
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
