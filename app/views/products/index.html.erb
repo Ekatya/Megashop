@@ -6,18 +6,24 @@
       <%= link_to ' по убыванию', root_path(sort: 'price_desc') %>
     </div>
 </div>
+
 <div class="products">
+
     <% @products.each do |product| %>
+
       <div class="product grid_3">
       <%= link_to image_tag(product.image_url(:thumb) || 'product_blank.gif'), product %>
        <%= link_to product.name, product %>
+
         <div class="price">
             <%= number_to_currency(product.price, precision: 2, unit: "грн.", separator: ",", delimiter: " ", format: "%n %u") %>
         </div>
-        <div class="price">
+        
+        
         <%= button_to 'Добавить в корзину', {controller: 'items', action: 'create', product_id: product.id}, class: 'add_to_cart' %>
-        </div>
+
         </div>
     <% end %>
+
 </div>
 <%= will_paginate @products %>
