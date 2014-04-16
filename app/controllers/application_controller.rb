@@ -5,11 +5,14 @@ class ApplicationController < ActionController::Base
 
 
   def current_cart
-    cart = Cart.find(session[:cart_id])
-  rescue
+    if !session[:cart_id]
     cart = Cart.create
-    session[:cart_id] = cart
+    session[:cart_id] = cart 
+  else
+    cart = Cart.find(session[:cart_id])
+  end
     cart
   end
+  
   helper_method :current_cart
 end

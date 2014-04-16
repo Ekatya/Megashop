@@ -8,6 +8,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Category.delete_all
+Category.create(id:1, name: 'Ноутбуки', position: 1)
+Category.create(id:2, name: 'Ноcки', position: 2)
 Product.delete_all
 
 Product.create(id: 1, name: "Ноутбук Samsung", price: 3500.0, category_id: 1, description: "Качественный ноутбук бизнес-класса")
