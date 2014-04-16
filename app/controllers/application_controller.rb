@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def current_cart
     cart = Cart.find(session[:cart_id])
-  rescue ActiveRecord::RecordNotFound
+  rescue
     cart = Cart.create
     session[:cart_id] = cart
     cart

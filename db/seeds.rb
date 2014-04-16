@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Product.delete_all
+
+Product.create(id: 1, name: "Ноутбук Samsung", price: 3500.0, category_id: 1, description: "Качественный ноутбук бизнес-класса")
+
+Product.create(id: 2, name: "Ноутбук Lenovo", price: 2500.0, category_id: 1, description: "Надежный ноутбук для вас")
+Product.create(id: 3, name: "Ноутбук HP", price: 1000.0, category_id: 1, description: "Ваш любимый ноутбук")
