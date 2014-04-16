@@ -5,5 +5,5 @@ class AddFieldsToProduct < ActiveRecord::Migration
     add_column :products, :description, :text
     add_column :products, :image, :string
     add_reference :products, :category, index: true
-  end Category
+  end 
 end

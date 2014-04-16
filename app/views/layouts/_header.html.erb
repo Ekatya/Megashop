@@ -15,11 +15,11 @@
       <% end %>
     </div>
     <div class="grid_4">
-      <%= link_to  do %>
-      Корзина: <%= current_cart.id %>
-      <br/>
-      В корзине: <%= current_cart.items.count %> <%= Russian.p(current_cart.items.count, "товар", "товара", "товаров") %>
-      <% end %>
+      <%= link_to(cart_path) do %>
+          В корзине <%= current_cart.items.count %>
+            <%= Russian.p(current_cart.items.count, "товар", "товара", "товаров") %>
+          <% end %>
+      <br><%= link_to 'Очистить корзину',{controller: "carts", action: "destroy",id: current_cart.id },:method => :delete %>
     </div>
     </div>
   </div>

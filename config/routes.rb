@@ -1,4 +1,6 @@
 MegashopT::Application.routes.draw do
+  resources :orders
+
   resources :comments
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -12,8 +14,8 @@ MegashopT::Application.routes.draw do
 
   root 'products#index'
   get 'cart' => 'carts#index'
-  
-
+  resources :carts
+  resources :orders
 
 
   # The priority is based upon order of creation: first created -> highest priority.

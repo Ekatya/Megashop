@@ -14,3 +14,7 @@
     <td colspan="2"><%= @total_price %> грн.</td>
   </tr>
 </table>
+
+<% if current_cart.items.any? %>
+<br><%= link_to 'Оформить заказ', new_order_path %>
+<% end %>
